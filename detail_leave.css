@@ -1,0 +1,121 @@
+.content {
+  padding: 0 20px;
+}
+
+.content>div {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.content p {
+  width: 90px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.content>div input {
+  flex: 1;
+  line-height: 30px;
+  text-indent: 5px;
+}
+
+.content>div button {
+  margin-top: 15px;
+  margin-right: 15px;
+  width: 80px;
+  background: #2372e9;
+  border-radius: 4px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.Revoke {
+  width: 100%;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.Revoke button {
+  background: #5491ff;
+  width: 87%;
+  height: 43.5px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+  border: 0px;
+  margin-bottom: 11px;
+}
+
+.font {
+  margin-top: 10px;
+  margin-left: 9%;
+  margin-right: 6.5%;
+  color: #cd2026;
+  font-size: 0.75em;
+}
+
+#QR{
+  width: 60px;
+  height: 60px;
+}
+.seal{
+  position: absolute;
+  bottom: 160px;
+  right: 10px;
+}
+.seal3{
+  position: absolute;
+  bottom: 340px;
+  right: 5px;
+}
+.seal>img,.seal3>img{
+  width: 160px;
+  height: 160px;
+}
+
+.pic{
+  flex-wrap:wrap;
+  width: 13%;
+  height: 13%;
+  margin-right: 3px;
+}
+
+.ld{
+  position: absolute;
+  width:100%; 
+  height:100%;
+  background-color:#FFFFFF;
+  z-index:1000;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ }
+.loadingimg{
+  width: 80px;
+  height: 80px;
+ }
+
+
+ .content #select,.content #select2,.content #select3{
+  height: 36px;
+  color: rgb(114, 114, 114);
+  border: 1px solid #b1b1b1;
+  padding: 0;
+  padding-left: 10px;
+  /* border-radius: 5px; */
+  margin-right: 4px;
+}
+.content #select{
+  width: 46%;
+  display: flex;
+  flex-grow:2;
+}
+.content #select2{
+  width: 32%;
+}
+.content #select3{
+  width: 23%;
+}

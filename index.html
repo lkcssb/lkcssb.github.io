@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>请假条查看</title>
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./detail_leave.css">
+  <link rel="stylesheet" href="./zoomify.min.css">
+</head>
+
+<body>
+  <!-- <div id="ld" class="ld">
+    <div id="center" style="position:absolute;"> 
+      <table> 
+        <tr><td><span id="disp">页面加载中,请等待...</span></td></tr> 
+      </table> 
+      <img class="loadingimg" src="../common/img/loading.gif" >
+    </div> 
+  </div> -->
+  
+  <div id="app">
+    <div class="content">
+      <div>
+        <p>请假状态</p>
+        <input type="text"  id="state" value="班主任已通过" disabled>
+      </div>
+      <div>
+        <p>姓名</p>
+        <input type="text"  id="studentName" disabled>
+      </div>
+      <div>
+        <p>学号</p>
+        <input type="text"  id="studentNumber" disabled>
+      </div>
+      <div>
+        <p>班级</p>
+        <input type="text"  id="className"  disabled>
+      </div>
+      <div>
+        <p>班主任</p>
+        <input type="text"  id="headTeacherName" value="杨嘉华" disabled>
+      </div>
+      <div>
+        <p>家长电话</p>
+        <input type="text"  id="parentPhone" disabled>
+      </div>
+      <div>
+        <p>请假类型</p>
+        <input type="text"  id="leaveType" value="事（假因私请假）" disabled>
+      </div>
+      <div id="start_time">
+        <p>请假开始时间</p>
+        <input type="text"  id="startTime" disabled>
+      </div>
+      <div id="end_time">
+        <p>请假结束时间</p>
+        <input type="text"  id="endTime" disabled>
+      </div>
+	  <div>
+	    <p>是否离深</p>
+	    <input type="text"  id="leaveSZ" value="否" disabled>
+	  </div>
+	  <!-- <div class="order-place">
+	    <p>去往目的地</p>
+	    <input type="text" disabled id="wheplace">
+	  </div> -->
+      <div>
+        <p>请假理由</p>
+        <input type="text"  id="reason" disabled>
+      </div>
+      <div id="man">
+        <p>审批人</p>
+        <input type="text"  value="" id="approved" placeholder="杨嘉华(同意)" disabled>
+      </div>
+      <div id="parento">
+        <p>家长意见：</p>
+        <input type="text"  value="" id="parent" disabled>
+      </div>
+      <!-- <div id="next">
+        <p>第二审批人：</p>
+        <input type="text" disabled value="" id="next_name">
+      </div>
+      <div id="Final">
+        <p>最终审批人：</p>
+        <input type="text" disabled value="" id="second_name">
+      </div> -->
+      <div class="seal2" style="display: block;">
+        <p style="float: left; line-height: 60px;">防伪码：</p>
+        <label for="QR"><img id="QR" src="./屏幕截图 2023-03-21 105908.png"  style="float: left;"></label><span style="color: brown; float: left; line-height: 60px;">(请假截图需展示)</span>
+      </div>
+    </div>
+    <!-- <div class="Revoke" id="rBtn" style="display: none;">
+      <button type="button" id="button">撤销申请</button>
+    </div> -->
+    <div class="seal" style="display: block;">
+      <img id="passPic" src="./微信图片_20230321100923.png" width="160" height="167">
+    </div>
+  </div>
+  <script src="./jq.js"></script>
+  <script src="./zoomify.min.js"></script>
+
+  <script>
+    // document.write('<script src="./js/detail_leave.js?v='+ new Date().getTime()+ '"><\/script>')
+    // const box =[]
+    // box.push($('#studentName').val)
+    // console.log(box)
+    $.ajax({
+      url:"list.json",
+      type:"get",
+      success:function(data){
+        console.log(data);
+        $('#studentName').attr("value",data.data[1])
+        $('#studentNumber').attr("value",data.data[2])
+        $('#className').attr("value",data.data[3])
+        $('#headTeacherName').attr("value",data.data[4])
+        $('#parentPhone').attr("value",data.data[5])
+        $('#startTime').attr("value",data.data[6])
+        $('#endTime').attr("value",data.data[7])
+        $('#reason').attr("value",data.data[8])
+        $('#approved').attr("value",data.data[9])
+        $('#parent').attr("value",data.data[10])
+      }
+    })
+
+    $('#QR').zoomify()
+
+     /**
+ * [isDuringDate 比较当前时间是否在指定时间段内]
+ * @author dongsir
+ * @DateTime 2019-08-21
+ * @version  1.0
+ * @param    date   [beginDateStr] [开始时间]
+ * @param    date   [endDateStr]   [结束时间]
+ * @return   Boolean
+ */
+
+// 当前时间是否在2018/09/17 13:00 - 2019/09/17 15:00 之间，输出 false
+  </script>
+</body>
+
+</html>
